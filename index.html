@@ -1,120 +1,387 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Emma's Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Designer &amp; Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+    </style>
 </head>
-
-<body>
-<div class="hero-background">
-<header>
-<div class="header">
-	<div class="logo"><img src="logo.png" alt="Emma Kennington's Logo"></div>
-	<nav>
-	<ul>
-		<li><a href="index.html#skills">Skills</a></li>
-		<li><a href="index.html#work">Work</a></li>
-		<li><a href="index.html#about">About</a></li>
-	</ul>
-	</nav>
-</div>
-</header>
-<div class="hero">
-	<h1>Hello, I'm an <br>Interactive Web Designer</h1>
-<p> </p>
-<a href="index.html#work">View My Work </a>
-</div>
-</div>
-
-<div class="skills" id="skills">
-	<div class="skill">
-		<i style="color:#fff;" class="fa fa-palette"></i>
-		<h2>Website Design</h2>
-		<p>I enjoy creating unique designs and layouts for engaging websites using Adobe Photoshop.</p>
-	</div>
-	<div class="skill">
-		<i style="color:#fff;" class="fa fa-code"></i>
-		<h2>Front-end Development</h2>
-		<p>I bring my designs to life using HTML, CSS, and JavaScript. </p>
-	</div>
-	<div class="skill">
-		<i style="color:#fff;" class="fa fa-search"></i>
-		<h2>Search Engine Optimization</h2>
-		<p>I also incorporate SEO while building and conducting SEO audits on existing websites. </p>
-	</div>
-</div>
-	
-<div class="about" id="about">
-<h2>About Me</h2>
-<hr>
-<p>I graduated from Iowa Western in 2024 with my A.A.S. in Web Design and Development and A.A.S in Web Applications and Computer Programing. I was interning at Sandhills Global while in school and was offered a full-time Interactive Design position upon graduating. I have since been designing and building websites, conducting SEO audits for existing sites, and consulting with dealers for their website needs. Within my first year full-time I designed and built over 50 new websites. I have also started training new employees for the company. 
-    <br /><br />
-I love getting to use my creative side to design custom user-friendly websites, but I find the most joy out of building websites and making the designs come to life.</p>
-</div>
-
-<div class="projects">
-<h3>Projects I have worked on at Sandhills Golbal</h3>
-<hr>
-<div class="work-wrapper" id="work">
-	
-	<a href="https://www.bierschbach.com/" target="blank"><div class="work"> 
-		<img src="siteart/bierschbach.jpg" alt="Bierschbach">
-	</div></a>
-	<a href="https://www.rexcoequipment.com/" target="blank"><div class="work"> 
-		<img src="siteart/rexco.jpg" alt="Rexco Equipment">
-	</div></a>
-	<a href="https://www.keatingtractor.com/" target="blank"><div class="work"> 
-		<img src="siteart/keating-tractor.jpg" alt="Keating Tractor">
-	</div></a>
-	<a href="https://www.jansonequipment.com" target="blank"><div class="work"> 
-		<img src="siteart/janson.jpg" alt="Janson Equipment">
-	</div></a>
-	<a href="https://www.brighamimplement.net/" target="blank"><div class="work"> 
-		<img src="siteart/brigham-implement.jpg" alt="Brigham Implement">
-	</div></a>
-	<a href="https://www.jmbequipment.com/" target="blank" ><div class="work"> 
-		<img src="siteart/jmb-equipment.jpg" alt="JMB Equipment">
-	</div></a>
-	<a href="https://www.asapequip.com/" target="blank"><div class="work"> 
-		<img src="siteart/asap-equip.jpg" alt="ASAP Equipment">
-	</div></a>
-	<a href="https://www.minnesotatruckandtractor.com/default.htm" target="blank"><div class="work"> 
-		<img src="siteart/minnesota-truck.jpg" alt="Minnesota Truck and Tractor">
-	</div></a>
-	<a href="https://www.freedomrock.net/" target="blank"><div class="work"> 
-		<img src="siteart/freedom-rock.jpg" alt="Freedom Rock">
-	</div></a>
-	<a href="https://www.schultzsmallengine.com/default.htm" target="blank"><div class="work"> 
-		<img src="siteart/schultz.jpg" alt="Schultz Small Engine ">
-	</div></a>
-    <a href="https://www.bussupply.com/" target="blank">
-        <div class="work">
-            <img src="siteart/bus-supply.jpg" alt="Bus Supply">
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-600">Portfolio</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium active">Home</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Projects</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">About</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-500 hover:text-indigo-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-    </a>
-    <a href="https://www.dtauctions.com/default.htm" target="blank" ><div class="work">
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Projects</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-        <img src="siteart/dt-auction.jpg" alt="DTauctions">
-    </div></a>
-</div>
-<footer>
-	<div class="footer-logo">
-	<img src="logo.png" alt="Emma Kennington's Logo">
-	</div>
-	<div class="footer-nav">
-	<ul>
-		<li><a href="index.html#work">Work</a></li>
-		<li><a href="index.html#skills">Skills</a></li>
-		<li><a href="index.html#about">About</a></li>
-	</ul>
-	</div>
-</footer>
-</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Front-End Designer & Developer</h1>
+                    <p class="text-xl text-indigo-100 mb-8">Creating beautiful, functional websites that deliver results</p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View My Work</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full overflow-hidden shadow-xl">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-8xl text-indigo-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Skills</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">I combine design and development skills to create exceptional digital experiences</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="skill-card bg-white rounded-xl shadow-lg p-8 transition duration-300 ease-in-out">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-paint-brush text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Website Design</h3>
+                    <p class="text-gray-600">I enjoy creating unique designs and layouts for engaging websites using Adobe Photoshop.</p>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="skill-card bg-white rounded-xl shadow-lg p-8 transition duration-300 ease-in-out">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-code text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Front-end Development</h3>
+                    <p class="text-gray-600">I bring my designs to life using HTML, CSS, and JavaScript.</p>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="skill-card bg-white rounded-xl shadow-lg p-8 transition duration-300 ease-in-out">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-search text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Search Engine Optimization</h3>
+                    <p class="text-gray-600">I also incorporate SEO while building and conducting SEO audits on existing websites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Projects</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A selection of my recent work at Sandhills Global</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg relative">
+                    <img src="bierschback.jpg" alt="Bierschback Website" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Construction Equipment Website</h3>
+                        
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300">
+                        <div class="text-center p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Construction Equipment Website</h3>
+                            <p class="text-white mb-4">Designed in Photoshop and built with HTML, CSS, and WordPress using the Sandhills editor</p>
+                            <a href="https://www.bierschbach.com/" target="blank" class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg relative">
+                    <img src="shoemaker.jpg" alt="Farm Equiment Website" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Farm Equipment Website</h3>
+                       
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300">
+                        <div class="text-center p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Farm Equipment Website</h3>
+                            <p class="text-white mb-4">Designed in Figma and built with HTML, CSS, PHP, and WordPress using the Sandhills editor.</p>
+                            <a href="https://www.shoemakerequipment.com/" target="blank" class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg relative">
+                    <img src="rexco-mock.jpg" alt="Construction Equipment Website" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Construction Equipment Website</h3>
+                       
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300">
+                        <div class="text-center p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Construction Equipment Website</h3>
+                            <p class="text-white mb-4">Designed in Photoshop and built with HTML, CSS, and WordPress using the Sandhills editor.</p>
+                            <a href="https://www.rexcoequipment.com/" target="blank" class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg relative">
+                    <img src="scholtens.jpg" alt="Farm Equipment Website" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Farm Equipment Website</h3>
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300">
+                        <div class="text-center p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Farm Equipment Website</h3>
+                            <p class="text-white mb-4">Designed in Photoshop and built with HTML, CSS, PHP and WordPress using the Sandhills editor.</p>
+                            <a href="https://www.scholtensequipment.com/" target="blank" class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg relative">
+                    <img src="janson.jpg" alt="Farm Equipment Website" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Farm Equipment Website</h3>
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300">
+                        <div class="text-center p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Farm Equipment Website</h3>
+                            <p class="text-white mb-4">Designed in Photoshop and built using HTML, CSS, and JavaScript</p>
+                            <a href="https://www.jansonequipment.com/" target="blank" class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View Site</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg relative">
+                    <img src="brigham.jpg" alt="Farm Equipment Website" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Farm Equipment Website</h3>
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex items-center justify-center opacity-0 transition duration-300">
+                        <div class="text-center p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Farm Equipment Website</h3>
+                            <p class="text-white mb-4">Designed in Photoshop and built using HTML, CSS, and JavaScript.</p>
+                            <a href="https://www.brighamimplement.net/" target="blank" class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:space-x-12">
+                
+                <div class="md:w-3/3">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        I graduated from Iowa Western in 2024 with my A.A.S. in Web Design and Development and A.A.S in Web Applications and Computer Programing. I was interning at Sandhills Global while in school and was offered a full-time Interactive Design position upon graduating.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        I have since been designing and building websites, conducting SEO audits for existing sites, and consulting with dealers for their website needs. Within my first year full-time I designed and built over 50 new websites. I have also started training new employees for the company.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        I love getting to use my creative side to design custom user-friendly websites, but I find the most joy out of building websites and making the designs come to life.
+                    </p>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Education & Experience</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 rounded-full p-2 mr-4">
+                                    <i class="fas fa-graduation-cap text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Iowa Western Community College</h4>
+                                    <p class="text-gray-600">A.A.S. in Web Design and Development, A.A.S in Web Applications and Computer Programming</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-indigo-100 rounded-full p-2 mr-4">
+                                    <i class="fas fa-briefcase text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Sandhills Global</h4>
+                                    <p class="text-gray-600">Interactive Designer (2022 - Present)</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-2xl font-bold">Portfolio</h2>
+                    <p class="mt-2 text-gray-400">Front-End Designer & Developer</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Navigation</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                            <li><a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white transition duration-300">Projects</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Skills</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li class="text-gray-400">Web Design</li>
+                            <li class="text-gray-400">Front-End Dev</li>
+                            <li class="text-gray-400">SEO</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
